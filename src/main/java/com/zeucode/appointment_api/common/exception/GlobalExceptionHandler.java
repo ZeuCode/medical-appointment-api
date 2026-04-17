@@ -27,6 +27,22 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 
+    // 3. Atrapa errores de Reglas de Negocio (Código 409 - Conflicto)
+    @ExceptionHandler(ConflictException.class)
+    public ResponseEntity<ApiErrorResponse> handleConflictException(
+        ConflictException ex, HttpServletRequest request) {
+
+        ApiErrorResponse response = ApiErrorResponse.builder()
+            .timestamp(Instant.now())
+            .status(HttpStatus.CONFLICT.value())
+            .error(HttpStatus.CONFLICT.getReasonPhrase())
+            .message(ex.getMessage())
+            .path(request.getRequestURI())
+            .build();
+
+        return new ResponseEntity<>(response, HttpStatus.CONFLICT);
+    }
+
     // 2. Atrapa CUALQUIER otro error no controlado (Código 500 - El comodín salvavidas)
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiErrorResponse> handleGlobalException(
