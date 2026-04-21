@@ -2,7 +2,7 @@ package com.zeucode.appointment_api.patient.service;
 
 import com.zeucode.appointment_api.common.exception.ConflictException;
 import com.zeucode.appointment_api.common.exception.ResourceNotFoundException;
-import com.zeucode.appointment_api.patient.model.entity.Patient;
+import com.zeucode.appointment_api.patient.entity.Patient;
 import com.zeucode.appointment_api.patient.repository.PatientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

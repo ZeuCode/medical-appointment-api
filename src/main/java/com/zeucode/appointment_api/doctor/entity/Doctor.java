@@ -1,7 +1,7 @@
-package com.zeucode.appointment_api.doctor.model.entity;
+package com.zeucode.appointment_api.doctor.entity;
 
 import com.zeucode.appointment_api.common.entity.AuditableEntity;
-import com.zeucode.appointment_api.specialty.model.entity.Specialty;
+import com.zeucode.appointment_api.specialty.entity.Specialty;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -32,6 +32,8 @@
 		<org.projectlombok.version>1.18.44</org.projectlombok.version>
 		<org.mapstruct.version>1.6.3</org.mapstruct.version>
 		<org.lombok-mapstruct-binding.version>0.2.0</org.lombok-mapstruct-binding.version>
+    <tomcat.version>10.1.54</tomcat.version>
+    <spring-framework.version>6.2.18</spring-framework.version>
 	</properties>
 	<dependencies>
 		<dependency>

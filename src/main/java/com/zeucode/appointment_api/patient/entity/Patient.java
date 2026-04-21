@@ -1,4 +1,4 @@
-package com.zeucode.appointment_api.patient.model.entity;
+package com.zeucode.appointment_api.patient.entity;
 
 import com.zeucode.appointment_api.common.entity.AuditableEntity;
 import jakarta.persistence.*;

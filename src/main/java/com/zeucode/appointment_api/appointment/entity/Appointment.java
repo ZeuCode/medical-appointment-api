@@ -1,8 +1,8 @@
-package com.zeucode.appointment_api.appointment.model.entity;
+package com.zeucode.appointment_api.appointment.entity;
 
-import com.zeucode.appointment_api.appointment.model.enums.AppointmentStatus;
+import com.zeucode.appointment_api.appointment.enums.AppointmentStatus;
 import com.zeucode.appointment_api.common.entity.AuditableEntity;
-import com.zeucode.appointment_api.patient.model.entity.Patient;
+import com.zeucode.appointment_api.patient.entity.Patient;
 import jakarta.persistence.*;
 import lombok.*;
 

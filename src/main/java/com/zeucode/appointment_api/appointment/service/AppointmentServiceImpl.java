@@ -1,14 +1,14 @@
 package com.zeucode.appointment_api.appointment.service;
 
-import com.zeucode.appointment_api.appointment.model.entity.Appointment;
-import com.zeucode.appointment_api.appointment.model.entity.TimeSlot;
-import com.zeucode.appointment_api.appointment.model.enums.AppointmentStatus;
-import com.zeucode.appointment_api.appointment.model.enums.SlotStatus;
+import com.zeucode.appointment_api.appointment.entity.Appointment;
+import com.zeucode.appointment_api.appointment.entity.TimeSlot;
+import com.zeucode.appointment_api.appointment.enums.AppointmentStatus;
+import com.zeucode.appointment_api.appointment.enums.SlotStatus;
 import com.zeucode.appointment_api.appointment.repository.AppointmentRepository;
 import com.zeucode.appointment_api.appointment.repository.TimeSlotRepository;
 import com.zeucode.appointment_api.common.exception.ConflictException;
 import com.zeucode.appointment_api.common.exception.ResourceNotFoundException;
-import com.zeucode.appointment_api.patient.model.entity.Patient;
+import com.zeucode.appointment_api.patient.entity.Patient;
 import com.zeucode.appointment_api.patient.repository.PatientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

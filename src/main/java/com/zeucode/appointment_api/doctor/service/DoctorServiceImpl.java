@@ -2,9 +2,9 @@ package com.zeucode.appointment_api.doctor.service;
 
 import com.zeucode.appointment_api.common.exception.ConflictException;
 import com.zeucode.appointment_api.common.exception.ResourceNotFoundException;
-import com.zeucode.appointment_api.doctor.model.entity.Doctor;
+import com.zeucode.appointment_api.doctor.entity.Doctor;
 import com.zeucode.appointment_api.doctor.repository.DoctorRepository;
-import com.zeucode.appointment_api.specialty.model.entity.Specialty;
+import com.zeucode.appointment_api.specialty.entity.Specialty;
 import com.zeucode.appointment_api.specialty.repository.SpecialtyRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

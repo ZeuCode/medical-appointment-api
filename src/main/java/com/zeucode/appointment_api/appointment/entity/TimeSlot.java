@@ -1,9 +1,9 @@
-package com.zeucode.appointment_api.appointment.model.entity;
+package com.zeucode.appointment_api.appointment.entity;
 
-import com.zeucode.appointment_api.appointment.model.enums.SlotStatus;
+import com.zeucode.appointment_api.appointment.enums.SlotStatus;
 import com.zeucode.appointment_api.common.entity.AuditableEntity;
-import com.zeucode.appointment_api.doctor.model.entity.Doctor;
-import com.zeucode.appointment_api.location.model.entity.Location;
+import com.zeucode.appointment_api.doctor.entity.Doctor;
+import com.zeucode.appointment_api.location.entity.Location;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.Instant;
@@ -36,5 +36,5 @@ public class TimeSlot extends AuditableEntity {
     private SlotStatus status = SlotStatus.AVAILABLE;
 
     @Version // MAGIA PROFESIONAL: Activa el Optimistic Locking automáticamente
-    private Long version;
+    private Integer version;
 }
