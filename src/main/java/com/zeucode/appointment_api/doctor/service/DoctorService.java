@@ -1,6 +1,6 @@
 package com.zeucode.appointment_api.doctor.service;
 
-import com.zeucode.appointment_api.doctor.model.entity.Doctor;
+import com.zeucode.appointment_api.doctor.entity.Doctor;
 import java.util.List;
 
 public interface DoctorService {

@@ -1,7 +1,7 @@
 package com.zeucode.appointment_api.appointment.repository;
 
-import com.zeucode.appointment_api.appointment.model.entity.TimeSlot;
-import com.zeucode.appointment_api.appointment.model.enums.SlotStatus;
+import com.zeucode.appointment_api.appointment.entity.TimeSlot;
+import com.zeucode.appointment_api.appointment.enums.SlotStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

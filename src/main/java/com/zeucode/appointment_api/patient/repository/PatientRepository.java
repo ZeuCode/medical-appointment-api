@@ -1,6 +1,6 @@
 package com.zeucode.appointment_api.patient.repository;
 
-import com.zeucode.appointment_api.patient.model.entity.Patient;
+import com.zeucode.appointment_api.patient.entity.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

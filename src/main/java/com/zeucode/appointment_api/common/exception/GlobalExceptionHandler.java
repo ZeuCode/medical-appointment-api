@@ -3,10 +3,12 @@ package com.zeucode.appointment_api.common.exception;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.time.Instant;
+import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -59,5 +61,28 @@ public class GlobalExceptionHandler {
             .build();
 
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    // 4. Atrapa errores de Validación de DTOs (Código 400 - Bad Request)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ApiErrorResponse> handleValidationExceptions(
+        MethodArgumentNotValidException ex, HttpServletRequest request) {
+
+        // Extraemos todos los mensajes de error del DTO y los unimos en un solo String
+        String errorMessage = ex.getBindingResult()
+            .getFieldErrors()
+            .stream()
+            .map(error -> error.getField() + ": " + error.getDefaultMessage())
+            .collect(Collectors.joining(", "));
+
+        ApiErrorResponse response = ApiErrorResponse.builder()
+            .timestamp(Instant.now())
+            .status(HttpStatus.BAD_REQUEST.value())
+            .error(HttpStatus.BAD_REQUEST.getReasonPhrase())
+            .message(errorMessage)
+            .path(request.getRequestURI())
+            .build();
+
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 }

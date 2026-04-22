@@ -1,6 +1,6 @@
 package com.zeucode.appointment_api.appointment.service;
 
-import com.zeucode.appointment_api.appointment.model.entity.Appointment;
+import com.zeucode.appointment_api.appointment.entity.Appointment;
 
 public interface AppointmentService {
 
